@@ -29,6 +29,7 @@
     "quotes": ["error", "double"],
     "no-dynamic-require": 0,
     "global-require": "off",
-    "import/extensions": 0
+    "import/extensions": 0,
+    "camelcase": 0
   }
 }
