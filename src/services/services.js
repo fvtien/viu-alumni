@@ -12,9 +12,9 @@ const {
 } = messages;
 const { successResponse, errorResponse } = misc;
 
-const findAll = async (res, model, obj) => {
+const findAll = async (res, model, opObj) => {
   try {
-    const data = await model.findAll(obj);
+    const data = await model.findAll(opObj);
 
     if (data.length != 0) {
       return successResponse(res, success, dataList, null, data);
@@ -25,35 +25,24 @@ const findAll = async (res, model, obj) => {
   }
 };
 
-const create = async (res, model, obj) => {
+const create = async (res, model, obj, token) => {
   try {
-    const data = await model.create(obj);
-    return successResponse(
-      res,
-      created,
-      createdSuccessful,
-      null,
-      data.dataValues
-    );
+    await model.create(obj);
+
+    return successResponse(res, created, createdSuccessful, token);
   } catch (error) {
     return errorResponse(res, serverError, error);
   }
 };
 
-const update = async (res, model, data, condition) => {
+const update = async (res, model, data, condition, token) => {
   try {
-    const dataValues = await model.update(data, {
+    await model.update(data, {
       where: condition,
       returning: true,
       plain: true,
     });
-    return successResponse(
-      res,
-      success,
-      updatedSuccessful,
-      null,
-      dataValues[1]
-    );
+    return successResponse(res, success, updatedSuccessful, token);
   } catch (error) {
     return errorResponse(res, serverError, error);
   }
@@ -76,7 +65,8 @@ const findOne = async (res, model, condition) => {
       where: condition,
       include: [{ all: true }],
     });
-    return successResponse(res, success, null, null, dataValue);
+
+    return dataValue;
   } catch (error) {
     return errorResponse(res, serverError, error);
   }
