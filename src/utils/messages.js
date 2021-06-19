@@ -52,6 +52,12 @@ const messages = {
   invalidBannerLink: "Liên kết banner không hợp lệ",
   emptyBannerDescription: "Nhập mô tả banner",
   invalidBannerDescription: "Mô tả banner không hợp lệ",
+  emptyParentMenu: "Nhập menu cha",
+  invalidParentMenu: "Menu cha không hợp lệ",
+  emptyTitleMenu: "Nhập tên menu",
+  invalidTitleMenu: "Tên menu không hợp lệ",
+  emptyUrlMenu: "Nhập url menu",
+  invalidUrlMenu: "Url menu không hợp lệ",
 };
 
 export default messages;
