@@ -66,6 +66,10 @@ const messages = {
   invalidZone: "Tên tỉnh/ thành phố không hợp lệ",
   emptyCountryId: "Chọn nhóm quốc gia",
   invalidCountryId: "Quốc gia không hợp lệ",
+  emptyParentNewsCategory: "Nhập danh mục tin tức cha",
+  invalidParentNewsCategory: "Danh mục tin tức cha không hợp lệ",
+  emptyTitleNewsCategory: "Nhập tên danh mục tin tức",
+  invalidTitleNewsCategory: "Tên danh mục tin tức không hợp lệ",
 };
 
 export default messages;
