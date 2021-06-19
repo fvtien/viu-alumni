@@ -70,6 +70,18 @@ const messages = {
   invalidParentNewsCategory: "Danh mục tin tức cha không hợp lệ",
   emptyTitleNewsCategory: "Nhập tên danh mục tin tức",
   invalidTitleNewsCategory: "Tên danh mục tin tức không hợp lệ",
+  emptyNewsName: "Nhập tên tin tức",
+  invalidNewsName: "Tên tin tức không hợp lệ",
+  emptyNewsImage: "Nhập ảnh tin tức",
+  invalidNewsImage: "Ảnh tin tức không hợp lệ",
+  emptyNewsShortDescription: "Nhập mô tả ngắn tin tức",
+  invalidNewsShortDescription: "Mô tả ngắn tin tức không hợp lệ",
+  emptyNewsDescription: "Nhập mô tả tin tức",
+  invalidNewsDescription: "Mô tả tin tức không hợp lệ",
+  emptyNewsCategoryId: "Chọn tên danh mục tin tức",
+  invalidNewsCategoryId: "Tên danh mục tin tức không hợp lệ",
+  emptyNewsUserId: "Chọn tác giả của tin tức",
+  invalidNewsUserId: "Tác giả của tin tức không hợp lệ",
 };
 
 export default messages;
