@@ -58,6 +58,10 @@ const messages = {
   invalidTitleMenu: "Tên menu không hợp lệ",
   emptyUrlMenu: "Nhập url menu",
   invalidUrlMenu: "Url menu không hợp lệ",
+  emptyCountry: "Nhập tên nước",
+  minCountry: "Tên nước tối thiểu 2 ký tự",
+  maxCountry: "Tên nước tối đa 128 ký tự",
+  invalidCountry: "Tên nước không hợp lệ",
 };
 
 export default messages;
