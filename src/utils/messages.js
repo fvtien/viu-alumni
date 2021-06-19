@@ -58,10 +58,14 @@ const messages = {
   invalidTitleMenu: "Tên menu không hợp lệ",
   emptyUrlMenu: "Nhập url menu",
   invalidUrlMenu: "Url menu không hợp lệ",
-  emptyCountry: "Nhập tên nước",
-  minCountry: "Tên nước tối thiểu 2 ký tự",
-  maxCountry: "Tên nước tối đa 128 ký tự",
-  invalidCountry: "Tên nước không hợp lệ",
+  emptyCountry: "Nhập tên quốc gia",
+  minCountry: "Tên quốc gia tối thiểu 2 ký tự",
+  maxCountry: "Tên quốc gia tối đa 128 ký tự",
+  invalidCountry: "Tên quốc gia không hợp lệ",
+  emptyZone: "Nhập tên tỉnh/ thành phố",
+  invalidZone: "Tên tỉnh/ thành phố không hợp lệ",
+  emptyCountryId: "Chọn nhóm quốc gia",
+  invalidCountryId: "Quốc gia không hợp lệ",
 };
 
 export default messages;
