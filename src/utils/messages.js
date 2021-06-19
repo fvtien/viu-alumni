@@ -44,6 +44,14 @@ const messages = {
   logoutSuccessful: "Đăng xuất thành công",
   invalidRequest: "Yêu cầu không hợp lệ, không tìm thấy mã token",
   invalidToken: "Mã token không hợp lệ, vui lòng đăng nhập và thử lại",
+  emptyBannerTitle: "Nhập tên banner",
+  invalidBannerTitle: "Tên banner không hợp lệ",
+  emptyBannerImage: "Nhập ảnh banner",
+  invalidBannerImage: "Ảnh banner không hợp lệ",
+  emptyBannerLink: "Nhập liên kết banner",
+  invalidBannerLink: "Liên kết banner không hợp lệ",
+  emptyBannerDescription: "Nhập mô tả banner",
+  invalidBannerDescription: "Mô tả banner không hợp lệ",
 };
 
 export default messages;
