@@ -1,8 +1,8 @@
-import redis from "redis";
-import dotenv from "dotenv";
+// import redis from "redis";
+// import dotenv from "dotenv";
 
-dotenv.config();
+// dotenv.config();
 
-const redisClient = redis.createClient(process.env.REDIS_URl);
+// const redisClient = redis.createClient(process.env.REDIS_URl);
 
-export default redisClient;
+// export default redisClient;

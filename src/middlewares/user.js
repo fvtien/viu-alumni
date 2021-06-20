@@ -5,7 +5,7 @@ import statusCodes from "../utils/statusCodes";
 import messages from "../utils/messages";
 import { viu_user } from "../database/models";
 import services from "../services/services";
-import redisClient from "../config/redisClient";
+// import redisClient from "../config/redisClient";
 
 const model = viu_user;
 const { findOne } = services;
@@ -62,36 +62,36 @@ const checkLogin = async (req, res, next) => {
   }
 };
 
-const checkUserToken = async (req, res, next) => {
-  let token = req.get("authorization");
-  if (!token) {
-    return errorResponse(res, badRequest, invalidRequest);
-  }
-  try {
-    token = token.split(" ").pop();
-    const decodedToken = jwt.verify(token, process.env.JWT_SECRET_KEY);
-    const { user_id } = decodedToken;
-    const condition = { user_id };
-    const userData = await findOne(res, model, condition);
-    return redisClient.smembers("token", async (err, tokensArray) => {
-      if (err) {
-        return errorResponse(res, serverError, err.message);
-      }
-      if (tokensArray.includes(token, 0) || !userData) {
-        return errorResponse(res, unauthorized, invalidToken);
-      }
-      req.userData = userData.dataValues;
-      return next();
-    });
-  } catch (error) {
-    return errorResponse(res, badRequest, invalidToken);
-  }
-};
+// const checkUserToken = async (req, res, next) => {
+//   let token = req.get("authorization");
+//   if (!token) {
+//     return errorResponse(res, badRequest, invalidRequest);
+//   }
+//   try {
+//     token = token.split(" ").pop();
+//     const decodedToken = jwt.verify(token, process.env.JWT_SECRET_KEY);
+//     const { user_id } = decodedToken;
+//     const condition = { user_id };
+//     const userData = await findOne(res, model, condition);
+//     return redisClient.smembers("token", async (err, tokensArray) => {
+//       if (err) {
+//         return errorResponse(res, serverError, err.message);
+//       }
+//       if (tokensArray.includes(token, 0) || !userData) {
+//         return errorResponse(res, unauthorized, invalidToken);
+//       }
+//       req.userData = userData.dataValues;
+//       return next();
+//     });
+//   } catch (error) {
+//     return errorResponse(res, badRequest, invalidToken);
+//   }
+// };
 
 export default {
   validateForm,
   isUserRegistered,
   validateLogin,
   checkLogin,
-  checkUserToken,
+  // checkUserToken,
 };

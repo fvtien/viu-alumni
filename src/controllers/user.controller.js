@@ -4,7 +4,7 @@ import services from "../services/services";
 import misc from "../helpers/misc.js";
 import statusCodes from "../utils/statusCodes";
 import messages from "../utils/messages";
-import redisClient from "../config/redisClient";
+// import redisClient from "../config/redisClient";
 
 const { success, serverError, unauthorized } = statusCodes;
 const { loginSuccessful, logoutSuccessful } = messages;
@@ -122,13 +122,13 @@ export default class UserController {
     }
   };
 
-  static logout = async (req, res) => {
-    try {
-      const token = req.get("authorization").split(" ").pop();
-      redisClient.sadd("token", token);
-      return successResponse(res, success, logoutSuccessful, null, null);
-    } catch (error) {
-      return errorResponse(res, unauthorized, null);
-    }
-  };
+  // static logout = async (req, res) => {
+  //   try {
+  //     const token = req.get("authorization").split(" ").pop();
+  //     redisClient.sadd("token", token);
+  //     return successResponse(res, success, logoutSuccessful, null, null);
+  //   } catch (error) {
+  //     return errorResponse(res, unauthorized, null);
+  //   }
+  // };
 }
