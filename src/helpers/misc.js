@@ -7,6 +7,7 @@ const successResponse = (res, statusCode, message, token, data) =>
     message,
     token,
     data,
+    statusCode,
   });
 
 const errorResponse = (res, statusCode, error) =>
