@@ -21,4 +21,6 @@ routes.use("/api/v1/admin/news-category", newsCategoryRoutes);
 routes.use("/api/v1/admin/news", newsRoutes);
 routes.use("/api/v1/admin/recruit", recruitRoutes);
 
+//test
+
 export default routes;
